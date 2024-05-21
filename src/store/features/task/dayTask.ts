@@ -2,27 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-/**
- * @param INCOMPLETE 未完成
- * @param COMPLETED 已完成
- * @param EXPIRED 已过期
- * @param REOPEN 重新开始
- */
-export enum TaskStatus {
-    INCOMPLETE = 0,
-    COMPLETED = 1,
-    EXPIRED = 2,
-    REOPEN = 3,
-}
+import type { dayTaskState, dayTaskListState } from "@/types/task";
 
-export interface dayTaskState {
-    title: string,
-    integral: number,
-    status: TaskStatus,
-}
-export interface dayTaskListState {
-    value: dayTaskState[]
-}
 const initialState: dayTaskListState = {
     value: [
         {

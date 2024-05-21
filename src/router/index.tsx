@@ -1,13 +1,9 @@
 import { lazy } from "react";
-import { createBrowserRouter, RouteObject } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import lazyLoad from "./lazyLoad";
+import { MenuRouteObject } from "@/types/router";
 
-
-export declare type MenuRouteObject = {
-    label?: string;
-} & RouteObject
-
-const childrenRoutes: RouteObject[] = [
+const childrenRoutes: MenuRouteObject[] = [
   { path: "user", element: lazyLoad(lazy(() => import("@/pages/User"))) },
 ];
 
