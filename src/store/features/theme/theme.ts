@@ -15,6 +15,11 @@ export const themeSlice = createSlice({
             state = action.payload;
         },
     },
+    extraReducers: (builder) => {
+        builder.addCase(updateTheme, (state, action) => {
+            state = action.payload;
+        });
+    },
 });
 
 export const { updateTheme } = themeSlice.actions;
