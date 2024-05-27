@@ -9,27 +9,25 @@ const Home: React.FC = () => {
   const dispatch = useDispatch();
 
   return (
-    <div>
-      <HomeBackground>
-        <h1
-          onClick={() => {
-            dispatch(
-              updateDayTask([
-                {
-                  title: "测试任务",
-                  integral: 1,
-                  status: 0,
-                },
-              ])
-            );
-          }}
-        >
-          Hello, React.js!
-        </h1>
-        <h2>{dayTaskList[0].title}</h2>
-        <Outlet />
-      </HomeBackground>
-    </div>
+    <HomeBackground>
+      <h1
+        onClick={() => {
+          dispatch(
+            updateDayTask([
+              {
+                title: "测试任务",
+                integral: 1,
+                status: 0,
+              },
+            ])
+          );
+        }}
+      >
+        Hello, React.js!
+      </h1>
+      <h2>{dayTaskList[0].title}</h2>
+      <Outlet />
+    </HomeBackground>
   );
 };
 

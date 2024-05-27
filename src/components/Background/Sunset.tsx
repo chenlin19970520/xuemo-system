@@ -1,3 +1,5 @@
+import sunsetStyle from "./Sunset.module.css";
+
 /**
  * @description: 日落
  * @param {*}
@@ -5,8 +7,8 @@
  */
 const Sunset = () => {
   return (
-    <div>
-      <h1>Sunset</h1>
+    <div className={sunsetStyle.sunset_bg}>
+     
     </div>
   );
 };

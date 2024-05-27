@@ -1,0 +1,13 @@
+/*
+黄、淡黄、淡蓝、蓝、深蓝
+*/
+.sunset_bg {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    to top,
+    rgba(255,255,255, 1),
+    rgba(65, 113, 154, 1) 100%
+  );
+}
+

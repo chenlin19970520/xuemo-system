@@ -2,9 +2,9 @@ import { TaskStatus } from "@/enum/task";
 
 
 export interface dayTaskState {
-    title: string,
-    integral: number,
-    status: TaskStatus,
+    title: string, // 标题
+    integral: number, // 积分
+    status: TaskStatus, // 状态
 }
 
 export interface dayTaskListState {
