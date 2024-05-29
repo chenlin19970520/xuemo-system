@@ -1,0 +1,13 @@
+.home_body {
+  width: 1200px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(-50%);
+ 
+}
+.body_line{
+    display: flex;
+}

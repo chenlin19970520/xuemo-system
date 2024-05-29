@@ -1,0 +1,38 @@
+/*
+ 变量
+*/
+:root {
+  --complate-color: #95de64;
+  --loading-color: #69b1ff;
+  --expired-color: #ff7875;
+  --reopen-color: #ffd666;
+}
+
+/*
+ 布局
+*/
+.flex-row {
+  display: flex;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-between_center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-status_INCOMPLETE {
+  color: var(--loading-color);
+}
+.task-status_COMPLETED {
+  color: var(--complate-color);
+}
+.task-status_EXPIRED {
+  color: var(--expired-color);
+}
+.task-status_REOPEN {
+  color: var(--reopen-color);
+}
