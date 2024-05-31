@@ -13,6 +13,7 @@
 */
 .flex-row {
   display: flex;
+  align-items: center;
 }
 .flex-between {
   display: flex;

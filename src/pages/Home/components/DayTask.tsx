@@ -43,7 +43,6 @@ const DayTaskList: React.FC = () => {
   };
   return (
     <div className={dayTaskCss.dayTast_list}>
-      <button onClick={handeClick}>点击</button>
       {dayTaskList.value.map((item: DayTaskState, index: number) => {
         return <DayTastItem value={item} key={index} />;
       })}
