@@ -43,9 +43,7 @@ const Home: React.FC = () => {
 
   const imgUrl = `http://localhost:3000/user/code?time=${codeRandom}`;
 
-  useEffect(() => {
-
-  }, []);
+  useEffect(() => {}, []);
 
   const handleLogin = () => {
     console.log(userInfo);
@@ -63,6 +61,17 @@ const Home: React.FC = () => {
     setUserInfo({
       ...userInfo,
       [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    console.log(file);
+    const formData = new FormData();
+    formData.append("file", file);
+    fetch("/api/v1/upload", {
+      method: "POST",
+      body: formData,
     });
   };
 
@@ -107,6 +116,8 @@ const Home: React.FC = () => {
             alt=""
           />
           <button onClick={handleLogin}>提交</button>
+
+          <input type="file" name="file" onChange={handleUpload} />
         </div>
       </div>
       <Outlet />
