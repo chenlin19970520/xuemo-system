@@ -127,6 +127,19 @@ const Home: React.FC = () => {
       },
     });
   };
+
+  const handleAdd = () => {
+    fetch("/api/v1/record/add/tags", {
+      method: "POST",
+      body: JSON.stringify({
+        userId: userInfo.id,
+        tags: ["测试1", "厉害1"],
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  };
   return (
     <HomeBackground>
       <div className={homeCss.home_body}>
@@ -186,6 +199,8 @@ const Home: React.FC = () => {
           <button onClick={handeDelete}>删除记录</button>
 
           <button onClick={handeUpdate}>更新记录</button>
+
+          <button onClick={handleAdd}>添加tags</button>
         </div>
       </div>
       <Outlet />
